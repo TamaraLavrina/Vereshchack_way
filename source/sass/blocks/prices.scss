@@ -1,0 +1,223 @@
+.prices {
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: 32% 32% auto;
+  column-gap: 25px;
+  margin: 235px auto 0;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content 1fr;
+    column-gap: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.prices__tariff {
+  max-width: 370px;
+  border: 1px solid $color-black-300;
+  border-radius: 6px;
+  padding: 35px 30px 30px;
+  background: $color-white-00;
+  letter-spacing: -0.27px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 288px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+    padding: 0;
+    margin-left: 30px;
+    margin-right: 0;
+    justify-self: end;
+    border-bottom: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-self: center;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.prices__tariff--gridclass {
+  @media (max-width: $tablet-width) {
+    margin-right: 30px;
+    margin-left: 0;
+    justify-self: start;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+    justify-self: center;
+  }
+}
+
+.prices__intro {
+  @media (max-width: $tablet-width) {
+    order: 1;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+  }
+}
+
+.prices__tariff h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.prices__head {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  margin-top: 0;
+  color: $color-black-700;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    padding: 25px 20px 0;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.prices__lead {
+  margin-top: 38px;
+  line-height: 24px;
+  margin-bottom: 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 15px 20px;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+.prices__lead::after {
+  content: "";
+  display: block;
+  margin-top: 27px;
+  width: 100%;
+  height: 1px;
+  background-color: $color-black-300;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 10px;
+  }
+}
+
+.prices__button {
+  display: block;
+  max-width: 310px;
+  letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    max-width: 288px;
+  }
+}
+
+.prices__tariff:hover {
+  box-shadow: inset 0 0 0 3px $primary-color-300;
+}
+
+.prices__tariff:hover .prices__button,
+.prices__tariff:hover .prices__lead::after {
+  background-color: $primary-color-300;
+}
+
+.prices__tariff:hover .prices__head {
+  color: $primary-color-300;
+}
+
+.prices__includes {
+  list-style: none;
+  line-height: 32px;
+  padding-left: 31px;
+  padding-top: 31px;
+  margin-top: 0;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 04px;
+    padding-left: 49px;
+    padding-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.prices__item {
+  line-height: 32px;
+  margin-bottom: 15px;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.prices__crutch::before,
+.prices__spike-nail::before,
+.prices__item::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -32px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/marker-rest.svg");
+}
+
+.prices__tariff:hover .prices__crutch::before,
+.prices__tariff:hover .prices__spike-nail::before,
+.prices__tariff:hover .prices__item::before {
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-image: url("../img/marker.svg");
+}
+
+.prices__spike-nail {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.prices__item:last-child {
+  margin-bottom: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.prices__crutch {
+  position: relative;
+  margin-bottom: 54px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 43px;
+  }
+}
+
+.prices__cost {
+  @media (max-width: $tablet-width) {
+    padding-top: 5px;
+    line-height: 34px;
+  }
+}

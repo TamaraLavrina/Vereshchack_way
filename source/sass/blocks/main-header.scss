@@ -1,0 +1,123 @@
+.main-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 860px;
+  color: $color-white-00;
+
+  @media (max-width: $tablet-width) {
+    min-height: 344px;
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-rows: 1fr;
+  }
+}
+
+.main-header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-black-300;
+  z-index: -1;
+
+  @media (max-width: $mobile-width) {
+    position: static;
+    height: 235px;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+}
+
+.main-header__image {
+  object-fit: cover;
+  width: 100%;
+
+  @media (max-width: $tablet-width) {
+    height: 344px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 235px;
+  }
+}
+
+.main-header__grid-layout {
+  grid-column: 2/3;
+  margin-left: 115px;
+  margin-top: 185px;
+  width: 412px;
+  // min-height: 379px;
+
+  @media (max-width: $tablet-width) {
+    grid-column: 1/-1;
+    margin: 60px auto;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    margin: 0 auto;
+    width: auto;
+  }
+}
+
+.main-header__grid-layout p {
+  margin: 0;
+  letter-spacing: -0.47px;
+  padding-right: 20px;
+  line-height: 27px;
+  margin-bottom: 34px;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    color: $color-black-900;
+    padding: 20px 10px 12px;
+  }
+}
+
+.main-header__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  padding-bottom: 29px;
+  letter-spacing: -1.11px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 45px;
+    padding-bottom: 15px;
+    letter-spacing: normal;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 81px auto;
+    padding-bottom: 0;
+    max-width: 300px;
+  }
+}
+
+.main-header__button {
+  display: block;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.main-header picture {
+  display: block;
+}

@@ -1,0 +1,33 @@
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 100px;
+  width: 61%;
+  padding: 0;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    min-height: 50px;
+    padding: 0;
+    padding-left: 21px;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 16px;
+  }
+}
+
+.page-header__logo {
+  padding-top: 8px;
+}
+
+@media (max-width: $tablet-width) {
+  .page-header__logo img {
+    width: 44px;
+    height: 17px;
+  }
+}
+

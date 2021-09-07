@@ -1,0 +1,144 @@
+.footer {
+  max-width: 1165px;
+  margin: 0 auto;
+  padding-top: 160px;
+  padding-bottom: 74px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 78px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+}
+
+.footer__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0 0 22px;
+
+  @media (max-width: $tablet-width) {
+    text-align: start;
+  }
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+  }
+}
+
+.footer__title--center-tablet {
+  @media (max-width: $tablet-width) {
+    position: relative;
+    margin-top: 45px;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__contacts {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 45px;
+  }
+}
+
+.footer__contacts a {
+  color: $primary-color-200;
+}
+
+.footer__next-trip::after,
+.footer__contacts::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 3px;
+  width: 1px;
+  height: 89%;
+  background-color: $color-lightgrey-300;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.footer__contacts::after {
+  right: -5px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    right: 0;
+    left: 0;
+    display: block;
+    width: 90%;
+    height: 1px;
+    margin: 0 auto;
+    top: 13px;
+  }
+}
+
+.footer__corp {
+  padding-left: 60px;
+
+  @media (max-width: $tablet-width) {
+    grid-column: 1/-1;
+    padding: 0 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 10px;
+  }
+}
+
+.footer__corp p {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba($color-black-900, 0.5);
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.footer__contacts--gridwrap {
+  grid-template-rows: max-content min-content 1fr;
+}
+
+.footer__title--center-tablet::before {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -32px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 92%;
+    height: 1px;
+    background-color: $color-lightgrey-300;
+  }
+}
