@@ -299,12 +299,13 @@ a {
     top: 17px;
     width: 25px;
     height: 25px;
-    background-image: url("../img/arrow.svg");
+    background-image: url("../img/arrow-menu.svg");
     opacity: 0.5; }
   .main-nav--closed .main-nav__list {
     display: none; }
   .main-nav--opened .main-nav__list {
-    display: flex; }
+    display: flex;
+    z-index: 10; }
   .main-nav--closed .main-nav__toggle-nav {
     background-image: url("../img/menu-open.svg");
     background-repeat: no-repeat;
@@ -315,7 +316,11 @@ a {
     background-image: url("../img/modal-close.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-color: inherit; } }
+    background-color: inherit;
+    z-index: 10; } }
+
+.main-nav--nojs .main-nav__toggle-nav {
+  display: none; }
 
 .button {
   text-transform: uppercase;
@@ -1513,5 +1518,19 @@ a {
 .contacts__phone {
   margin-right: 12px;
   color: #d7d9df; }
+
+.success-message {
+  display: flex;
+  width: 728px;
+  height: 444px;
+  background-color: #fbf8f8;
+  margin: auto;
+  justify-content: center; }
+
+.success-message-wrapper {
+  display: flex;
+  text-align: center;
+  padding: 30px;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
